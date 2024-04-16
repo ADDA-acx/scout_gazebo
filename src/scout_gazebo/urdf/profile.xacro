@@ -1,0 +1,37 @@
+<!--
+    小车底盘添加框架
+-->
+<robot name="my_profile" xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <link name="Profile_link">
+        <!-- <inertial>
+            <origin rpy="0 0 0" xyz="-0.0891131570976722 -0.000253112961527518 -0.474008313278529"/>
+            <mass value="1"/>
+            <inertia ixx="6.75685705276497" ixy="-0.00399954038625873" ixz="0.264710072044025" iyy="8.11766845319496" iyz="0.000278279991055665" izz="6.59432020448618"/>
+        </inertial> -->
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://scout_gazebo/meshes/profile.dae"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="Profile_joint" type="fixed">
+        <origin rpy="0 0 3.1416" xyz="0 0 -0.093"/>
+        <parent link="base_link" />
+        <child link="Profile_link" />
+    </joint>
+    <gazebo reference="support">
+    </gazebo>
+
+</robot>

@@ -1,0 +1,33 @@
+<!--
+    小车底盘添加雷达
+-->
+<robot name="my_lidar" xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <!-- 雷达关节以及link -->
+    <link name="Lidar_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+               <mesh filename="package://scout_gazebo/meshes/lidar.dae"/>
+            </geometry>
+            <material name="" />
+                <color rgba="0.905882352941176 0.992156862745098 1 0.4"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.07" length="0.05" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        </collision>
+        
+    </link>
+
+    <joint name="Lidar_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="Lidar_link" />
+        <origin rpy="0 0 -1.5708" xyz="0.28025 0.0005 1.1457"/>
+    </joint>
+    <gazebo reference="Lidar_link">
+        <material>Gazebo/Black</material>
+    </gazebo>
+</robot>

@@ -1,0 +1,41 @@
+<!-- ���鎀雁�後�括�� xacro ��篁� -->
+<robot name="my_camera" xmlns:xacro="http://wiki.ros.org/xacro">
+    <!-- ���鎀翫��� -->
+    <xacro:property name="camera_length" value="0.05" /> <!-- ���鎀顔�水墾(x) -->
+    <xacro:property name="camera_width" value="0.08" /> <!-- ���鎀翫�綺�(y) -->
+    <xacro:property name="camera_height" value="0.08" /> <!-- ���鎀顔�綺�(z) -->
+    <xacro:property name="camera_x" value="0.45" /> <!-- ���鎀翫�茖���x���� -->
+    <xacro:property name="camera_y" value="0.0" /> <!-- ���鎀翫�茖���y���� -->
+    <xacro:property name="camera_z" value="${base_z_size / 2 + camera_height / 2}" /> <!-- ���鎀翫�茖���z����:綺���蕭�綺� / 2 + ���鎀顔�綺� / 2  -->
+    <xacro:property name="camera_m" value="0.01" /> <!-- ���鎀頑寒�� -->
+
+    <!-- ���鎀翫�活��篁ュ�link -->
+    <link name="camera">
+        <visual>
+            <geometry>
+                <mesh filename="package://scout_gazebo/meshes/ZED2.dae"/>
+            </geometry>
+            <origin xyz="-0.065 0.0 -0.025" rpy="0.0 0.0 0.0" />
+            <material name="black" />
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${camera_length} ${camera_width} ${camera_height}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        </collision>
+        <xacro:Box_inertial_matrix m="${camera_m}" l="${camera_length}" w="${camera_width}" h="${camera_height}" />
+        
+    </link>
+
+    <joint name="camera2base_link" type="fixed">
+        <parent link="base_link" />
+        <child link="camera" />
+        <origin rpy="0.0 0.0 0.0" xyz="${camera_x} ${camera_y} 0.865" />
+    </joint>
+    <gazebo reference="camera">
+        <!-- <material>Gazebo/Blue</material> -->
+    </gazebo>
+    
+    
+</robot>

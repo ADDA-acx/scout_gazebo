@@ -1,0 +1,13 @@
+<launch>
+    <include file="$(find scout_gazebo)/launch/scout_gazebo_world.launch" />
+    <include file="$(find scout_gazebo_base)/launch/scout_base_sim.launch" />
+    <!-- <node pkg="scout_gazebo" type="gps_to_utm.py" name="gps_to_utm_node"/> -->
+    <node name="gps_conv" pkg="gps_common" type="utm_odometry_node">
+        <remap from="odom" to="vo"/>
+        <!-- <remap from="camera/rgb/image_raw" to="kitti/image"/> -->
+        <!-- <remap from="fix" to="/gps/fix" /> -->
+        <param name="rot_covariance" value="99999" />
+        <param name="frame_id" value="base_link" />
+    </node>
+</launch>
+

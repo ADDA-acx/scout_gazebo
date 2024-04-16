@@ -1,0 +1,39 @@
+<robot name="my_gps" xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <xacro:property name="gps_length" value="0.145" /> 
+    <xacro:property name="gps_width" value="0.174" /> 
+    <xacro:property name="gps_height" value="0.045" /> 
+    <xacro:property name="gps_x" value="0.07425" /> 
+    <xacro:property name="gps_y" value="0" /> 
+    <xacro:property name="gps_z" value="0.965" /> 
+    <xacro:property name="gps_m" value="0.01" /> 
+
+    <link name="gps_link">
+        <visual>
+            <geometry>
+                <box size="${gps_length} ${gps_width} ${gps_height}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <material name="black" />
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${gps_length} ${gps_width} ${gps_height}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        </collision>
+        <xacro:Box_inertial_matrix m="${gps_m}" l="${gps_length}" w="${gps_width}" h="${gps_height}" />
+        
+    </link>
+
+    <joint name="gps_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="gps_link" />
+        <origin xyz="${gps_x} ${gps_y} ${gps_z}" />
+    </joint>
+    <gazebo reference="gps_link">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    
+    
+</robot>

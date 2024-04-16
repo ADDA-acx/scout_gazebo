@@ -1,0 +1,25 @@
+<launch>
+    <arg name="robot_namespace" default="/"/>
+    <arg name="world_name" default="$(find scout_gazebo)worlds/tree.world"/>
+    <!-- <arg name = "model_xacro" default = "$(find scout_gazebo)/urdf/base.xacro" /> -->
+    
+    <!-- 将 Urdf 文件的内容加载到参数服务器 -->
+    <!-- <param name="robot_description" command="$(find xacro)/xacro $(arg model_xacro)" /> -->
+
+    <!-- 启动 gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_name)"/>
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+    </include>
+
+
+    <!-- 在 gazebo 中显示机器人模型 -->
+   <!-- <node pkg="gazebo_ros" type="spawn_model" name="model" args="-urdf -model scout -param robot_description"  />   -->
+    <include file="$(find scout_gazebo)/launch/spawn_scout_v2.launch">
+    </include>
+    
+</launch>

@@ -1,0 +1,31 @@
+<robot name="my_imu" xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <link name="imu_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://scout_gazebo/meshes/IMU_link.STL"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <material name="black" />
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.051 0.045 0.024" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        </collision>
+        <xacro:Box_inertial_matrix m="0.1" l="0.051" w="0.045" h="0.024" />
+        
+    </link>
+
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="imu_link" />
+        <origin rpy="0 0 3.1416" xyz="-0.050625 -0.00025 0.54" />
+    </joint>
+    <gazebo reference="imu_link">
+        <!-- <material>Gazebo/Blue</material> -->
+    </gazebo>
+    
+    
+</robot>

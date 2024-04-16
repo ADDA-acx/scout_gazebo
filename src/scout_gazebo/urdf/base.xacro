@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+
+<robot name="scout_v2"  xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:arg name="gpu" default="false"/>
+    <xacro:property name="gpu" value="$(arg gpu)" />
+    <xacro:arg name="organize_cloud" default="false"/>
+    <xacro:property name="organize_cloud" value="$(arg organize_cloud)" />    
+
+    <xacro:arg name="robot_namespace" default="/" /> 
+
+    <!-- 属性封装 -->
+    <xacro:property name="M_PI" value="3.14159"/>
+
+    <xacro:property name="base_x_size" value="0.9250000" />
+    <xacro:property name="base_y_size" value="0.380000" />
+    <xacro:property name="base_z_size" value="0.210000" />
+
+    <xacro:property name="wheelbase" value="0.498" />
+    <xacro:property name="track" value="0.58306" />   <!-- track————车轮间距 -->
+    <xacro:property name="wheel_vertical_offset" value="-0.0702" />
+
+    <xacro:property name="wheel_length" value="1.1653e-01" />
+    <xacro:property name="wheel_radius" value="1.6459e-01" />
+    
+    <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0" />
+    </material>
+    
+    <!-- 包含其他xacro文件 -->
+    <xacro:include filename="$(find scout_gazebo)/urdf/scout_wheel_type1.xacro" />
+    <xacro:include filename="$(find scout_gazebo)/urdf/scout_wheel_type2.xacro" />
+
+    <xacro:include filename="$(find scout_gazebo)/urdf/inertial.xacro" />
+    <!-- <xacro:include filename="$(find scout_gazebo)/urdf/laser.xacro" /> -->
+    <xacro:include filename="$(find scout_gazebo)/urdf/camera.xacro" />
+    <xacro:include filename="$(find scout_gazebo)/urdf/imu.xacro" />
+    <xacro:include filename="$(find scout_gazebo)/urdf/gps.xacro" />
+    <xacro:include filename="$(find scout_gazebo)/urdf/profile.xacro" />
+    <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+    <xacro:VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" organize_cloud="${organize_cloud}" hz="10" samples="440" gpu="${gpu}">
+    <origin xyz="0.28025 0.0005 1.12" rpy="0 0 0" />
+    </xacro:VLP-16>
+    <!-- <xacro:include filename="$(find scout_gazebo)/urdf/move.xacro" /> -->
+    
+    <!-- <xacro:include filename="$(find scout_gazebo)/urdf/sensor_laser.xacro" /> -->
+    <!-- <xacro:include filename="$(find scout_gazebo)/urdf/sensor_gps.xacro" /> -->
+    <xacro:include filename="$(find scout_gazebo)/urdf/sensor_kinetic.xacro" />
+    <xacro:include filename="$(find scout_gazebo)/urdf/sensor_imu.xacro" />
+
+
+
+    <!-- Base link  底盘 -->
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <!--<box size="${base_x_size} ${base_y_size} ${base_z_size}"/>-->
+                <mesh filename="package://scout_gazebo/meshes/base_link.dae" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.008" rpy="0 0 0" />
+            <geometry>
+                <box size="${base_x_size} ${base_y_size} ${base_z_size}"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0 0 ${base_z_size/6}" rpy="0 0 0" />
+            <geometry>
+                <box size="${base_x_size/6} ${base_y_size*1.65} ${base_z_size/3}"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- <link name="base_footprint"/> -->
+
+
+    <!-- 关节
+    <joint name="base_footprint_joint" type="fixed">
+        <origin xyz="0 0 ${wheel_vertical_offset - wheel_radius}" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="base_footprint" />
+    </joint> -->
+
+    <link name="inertial_link">
+        <inertial>
+            <mass value="40" />
+            <!-- <mass value="50" /> -->
+            <!-- <origin xyz="-0.00065 -0.085 0.062" />
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296" /> -->
+            <origin xyz="0.0 0.0 0.0" />
+            <inertia ixx="2.288641" ixy="0" ixz="0" iyy="5.103976" iyz="0" izz="3.431465" />
+        </inertial>
+    </link>
+
+    <joint name="inertial_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="inertial_link" />
+    </joint>
+
+    <!-- 宏  Scout wheel macros -->
+    <!-- wheel labeled from 0 to 3, conter-clockwise, starting from front right wheel -->
+    <!-- motor 1 and 2 (left side) are mechanically installed in a reversed direction -->
+    <xacro:scout_wheel_type1 wheel_prefix="front_right">
+        <origin xyz="${wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="3.14 0 0" />
+    </xacro:scout_wheel_type1>
+    <xacro:scout_wheel_type2 wheel_prefix="front_left">
+        <origin xyz="${wheelbase/2} ${track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
+    </xacro:scout_wheel_type2>
+    <xacro:scout_wheel_type1 wheel_prefix="rear_left">
+        <origin xyz="${-wheelbase/2} ${track/2} ${wheel_vertical_offset}" rpy="0 0 0" />
+    </xacro:scout_wheel_type1>
+    <xacro:scout_wheel_type2 wheel_prefix="rear_right">
+        <origin xyz="${-wheelbase/2} ${-track/2} ${wheel_vertical_offset}" rpy="3.14 0 0" />
+    </xacro:scout_wheel_type2>
+
+    <gazebo>
+      <plugin name="gazebo_ros_gps" filename="libhector_gazebo_ros_gps.so">
+          <updateRate>10.0</updateRate>
+          <bodyName>gps_link</bodyName>
+          <frameId>gps_link</frameId>
+          <topicName>/fix</topicName>
+          <velocityTopicName>/fix_velocity</velocityTopicName>
+          <!-- <referenceLatitude>-30.06022459407145675</referenceLatitude> -->
+          <!-- <referenceLongitude>-51.173913575780311191</referenceLongitude> -->
+          <referenceHeading>90</referenceHeading>
+          <referenceAltitude>10</referenceAltitude>
+          <offset>0 0 0</offset>
+          <drift>0.000 0.000 0.000</drift>
+          <gaussianNoise>0.00 0.00 0.00</gaussianNoise>
+          <velocityDrift>0.000 0.000 0.000</velocityDrift>
+          <velocityGaussianNoise>0.0 0.0 0.0</velocityGaussianNoise>
+<!--                <drift>0.001 0.001 0.001</drift>-->
+<!--                <gaussianNoise>0.01 0.01 0.01</gaussianNoise>-->
+<!--                <velocityDrift>0 0 0</velocityDrift>-->
+<!--                <velocityGaussianNoise>0.05 0.05 0.05</velocityGaussianNoise>-->
+      </plugin>
+    </gazebo>
+
+    <!-- Additional definitions -->
+    <xacro:include filename="$(arg urdf_extras)" />
+
+    <!-- Gazebo definitions  -->
+    <xacro:include filename="$(find scout_gazebo)/urdf/scout_v2.gazebo" />
+
+</robot>

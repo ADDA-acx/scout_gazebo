@@ -1,0 +1,8 @@
+prefix=/home/adda/ros_pack/scout_gazebo/devel
+
+Name: scout_gazebo_base
+Description: Description of scout_gazebo_base
+Version: 0.3.3
+Cflags: -I/home/adda/ros_pack/scout_gazebo/src/scout_gazebo_base/include
+Libs: -L${prefix}/lib -lscout_messenger
+Requires: scout_msgs roscpp sensor_msgs wrp_sdk

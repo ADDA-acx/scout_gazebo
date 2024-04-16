@@ -1,0 +1,8 @@
+prefix=/home/adda/ros_pack/scout_gazebo/devel
+
+Name: velodyne_description
+Description: Description of velodyne_description
+Version: 1.0.13
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

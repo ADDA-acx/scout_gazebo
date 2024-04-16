@@ -1,0 +1,8 @@
+prefix=/home/adda/ros_pack/scout_gazebo/devel
+
+Name: gps_common
+Description: Description of gps_common
+Version: 0.3.3
+Cflags: -I/home/adda/ros_pack/scout_gazebo/devel/include -I/home/adda/ros_pack/scout_gazebo/src/gps_umd/gps_common/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime message_filters nav_msgs roscpp sensor_msgs std_msgs rospy

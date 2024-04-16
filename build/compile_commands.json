@@ -1,0 +1,72 @@
+[
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/c++  -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -std=c++11 -o CMakeFiles/wrp_sdk.dir/src/asyncio/async_serial.cpp.o -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/asyncio/async_serial.cpp",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/asyncio/async_serial.cpp"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/c++  -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -std=c++11 -o CMakeFiles/wrp_sdk.dir/src/asyncio/async_can.cpp.o -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/asyncio/async_can.cpp",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/asyncio/async_can.cpp"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/c++  -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -std=c++11 -o CMakeFiles/wrp_sdk.dir/src/platforms/mobile_base.cpp.o -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/mobile_base.cpp",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/mobile_base.cpp"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/c++  -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -std=c++11 -o CMakeFiles/wrp_sdk.dir/src/platforms/hunter_base.cpp.o -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/hunter_base.cpp",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/hunter_base.cpp"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/cc -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -o CMakeFiles/wrp_sdk.dir/src/platforms/hunter_can_parser.c.o   -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/hunter_can_parser.c",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/hunter_can_parser.c"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/c++  -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -std=c++11 -o CMakeFiles/wrp_sdk.dir/src/platforms/scout_base.cpp.o -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/scout_base.cpp",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/scout_base.cpp"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/cc -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -o CMakeFiles/wrp_sdk.dir/src/platforms/scout_can_parser.c.o   -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/scout_can_parser.c",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/scout_can_parser.c"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/cc -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -o CMakeFiles/wrp_sdk.dir/src/platforms/scout_uart_parser.c.o   -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/scout_uart_parser.c",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/scout_uart_parser.c"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/c++  -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -std=c++11 -o CMakeFiles/wrp_sdk.dir/src/platforms/tracer_base.cpp.o -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/tracer_base.cpp",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/tracer_base.cpp"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/cc -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -o CMakeFiles/wrp_sdk.dir/src/platforms/tracer_can_parser.c.o   -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/tracer_can_parser.c",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/tracer_can_parser.c"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/cc -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -o CMakeFiles/wrp_sdk.dir/src/platforms/tracer_uart_parser.c.o   -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/tracer_uart_parser.c",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/tracer_uart_parser.c"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/c++  -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -std=c++11 -o CMakeFiles/wrp_sdk.dir/src/platforms/bunker_base.cpp.o -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/bunker_base.cpp",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/bunker_base.cpp"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/cc -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -o CMakeFiles/wrp_sdk.dir/src/platforms/bunker_can_parser.c.o   -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/bunker_can_parser.c",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/bunker_can_parser.c"
+},
+{
+  "directory": "/home/adda/ros_pack/scout_gazebo/build/agx_sdk",
+  "command": "/usr/bin/cc -DASIO_STANDALONE -DROS_BUILD_SHARED_LIBS=1 -Dwrp_sdk_EXPORTS -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include  -O3 -DNDEBUG -fPIC   -o CMakeFiles/wrp_sdk.dir/src/platforms/bunker_uart_parser.c.o   -c /home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/bunker_uart_parser.c",
+  "file": "/home/adda/ros_pack/scout_gazebo/src/agx_sdk/src/platforms/bunker_uart_parser.c"
+}
+]

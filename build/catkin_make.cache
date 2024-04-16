@@ -1,0 +1,2 @@
+agx_sdk:gazebo_terrain_tutorial:gps_umd/gps_common:gps_umd/gps_umd:gps_umd/gpsd_client:scout_gazebo:scout_gazebo_base:scout_msgs:velodyne_simulator/velodyne_description:velodyne_simulator/velodyne_gazebo_plugins:velodyne_simulator/velodyne_simulator
+-DCATKIN_DEVEL_PREFIX=/home/adda/ros_pack/scout_gazebo/devel -DCMAKE_INSTALL_PREFIX=/home/adda/ros_pack/scout_gazebo/install -G Unix Makefiles

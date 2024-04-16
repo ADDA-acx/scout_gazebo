@@ -1,0 +1,8 @@
+prefix=/home/adda/ros_pack/scout_gazebo/devel
+
+Name: gpsd_client
+Description: Description of gpsd_client
+Version: 0.3.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

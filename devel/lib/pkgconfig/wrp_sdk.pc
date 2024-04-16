@@ -1,0 +1,8 @@
+prefix=/home/adda/ros_pack/scout_gazebo/devel
+
+Name: wrp_sdk
+Description: Description of wrp_sdk
+Version: 0.1.5
+Cflags: -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/include -I/home/adda/ros_pack/scout_gazebo/src/agx_sdk/asio/include
+Libs: -L${prefix}/lib -lwrp_sdk
+Requires: 

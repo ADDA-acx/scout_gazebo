@@ -1,0 +1,8 @@
+prefix=/home/adda/ros_pack/scout_gazebo/devel
+
+Name: scout_msgs
+Description: Description of scout_msgs
+Version: 0.3.3
+Cflags: -I/home/adda/ros_pack/scout_gazebo/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

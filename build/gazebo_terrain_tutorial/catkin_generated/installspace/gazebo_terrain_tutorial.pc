@@ -1,0 +1,8 @@
+prefix=/home/adda/ros_pack/scout_gazebo/install
+
+Name: gazebo_terrain_tutorial
+Description: Description of gazebo_terrain_tutorial
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: gazebo_ros

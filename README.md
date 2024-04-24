@@ -1,5 +1,5 @@
 # Outdoor simulation environment based on Agilex-Scout 2.0
-**This repository provides an outdoor simulation environment for differential robotics including IMU, GPS, cameras, LIDAR and wheeled odometers.**
+**This repository provides an outdoor simulation environment for differential robotics including IMU, GPS, Camera, LIDAR and wheeled odometer.**
 
 
 https://github.com/ADDA-acx/scout_gazebo/assets/113503745/700485e0-e967-43d1-a6c7-25e7381a46e8

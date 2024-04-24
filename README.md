@@ -46,3 +46,6 @@ roslaunch scout_gazebo scout_gazebo.launch
 ```
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
+
+## Reference
+https://github.com/agilexrobotics/scout_ros

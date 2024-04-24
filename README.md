@@ -1,5 +1,5 @@
-# 基于Agilex-Scout2.0的户外仿真环境
-
+# Outdoor simulation environment based on Agilex-Scout 2.0
+**This repository provides an outdoor simulation environment for differential robotics including IMU, GPS, cameras, LIDAR and wheeled odometers.**
 
 
 ## Usage

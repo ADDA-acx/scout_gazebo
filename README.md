@@ -23,13 +23,9 @@ git clone https://github.com/osrf/gazebo_models.git
 
 ```
 sudo apt-get install ros-noetic-velocity-controllers
-
 sudo apt-get install ros-noetic-gazebo-ros-control
-
 sudo apt install ros-noetic-ros-controllers
-
 sudo apt install ros-noetic-teleop-twist-keyboard
-
 sudo apt-get install ros-noetic-hector-gazebo-plugins
 ```
 

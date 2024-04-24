@@ -2,6 +2,10 @@
 **This repository provides an outdoor simulation environment for differential robotics including IMU, GPS, cameras, LIDAR and wheeled odometers.**
 
 
+https://github.com/ADDA-acx/scout_gazebo/assets/113503745/700485e0-e967-43d1-a6c7-25e7381a46e8
+
+
+
 ## Usage
 
 ### Dependency

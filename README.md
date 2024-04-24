@@ -45,3 +45,8 @@ source devel/setup.bash
 roslaunch scout_gazebo scout_gazebo.launch 
 ```
 
+### Keyboard control
+
+```
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
